@@ -114,7 +114,7 @@ def get_groups(session, cloud, ssl_verify=False):
 
 def get_users(session, cloud, ssl_verify=False):
 	try:
-		url = f"http://zsapi.{cloud}.net/api/v1/users"
+		url = f"http://zsapi.{cloud}.net/api/v1/users?pageSize=10000"
 		
 		session, response = api_request(session, "GET", url, ssl_verify=ssl_verify)
 

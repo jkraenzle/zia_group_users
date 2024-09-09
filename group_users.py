@@ -279,7 +279,7 @@ def main ():
 
 			if match != None and found == False:
 				users_to_add.append(user)
-			if args.action == 'overwrite' or args.action == 'test' and match == None and found == True:
+			if (args.action == 'overwrite' or args.action == 'test') and match == None and found == True:
 				users_to_remove.append(user)
 
 		except Exception as e:
